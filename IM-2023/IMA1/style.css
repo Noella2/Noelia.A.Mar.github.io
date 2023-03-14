@@ -1,8 +1,65 @@
 .column1 {
     float: left; 
     width: 50%;
+
+    
 }
 .column2 {
     float: left; 
     width: 50%;
+    
 }
+
+p{
+    color: rgb(126, 124, 124);
+}
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(28, 0, 0);
+    padding: 3.5%;
+    background-color: #F4EEEF;
+    border: solid 1px;
+    outline-offset: 4.5px;
+    outline: solid 1px;
+}
+
+
+
+.center{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1{
+    
+    border: 1px solid rgb(0, 0, 0); 
+    outline-offset: 4.5px;
+    outline: 1px solid rgb(0, 0, 0);
+  
+}
+
+.row{
+    padding: 9px;
+    border: 1px solid rgb(0, 0, 0); 
+    outline-offset: 4.5px;
+    outline: 1px solid rgb(0, 0, 0);
+}
+
+.he2{
+    border: 1px solid rgb(0, 0, 0); 
+    outline-offset: 4.5px;
+    outline: 1px solid rgb(0, 0, 0);
+}
+.he3{
+    border-bottom: 0.5px solid rgb(0, 0, 0);
+    border-top: 1px solid rgb(0, 0, 0) ;
+    border-left: 1px solid rgb(0, 0, 0);
+    border-right: 1px solid rgb(0, 0, 0);
+    outline-offset: 4.5px;
+    outline: 1px solid rgb(0, 0, 0);
+}
+
+
+
