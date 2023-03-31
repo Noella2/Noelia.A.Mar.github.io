@@ -4,7 +4,7 @@
 }
 
 /* Creating colour palatte to refer to for the grid background colours and boarders
-I chose to use the colour orange as the main charicter in the reference comic "Heard" was shaded with tones of orange  */
+I chose to use the colour orange as the main charicter in the reference comic "Hedra" was shaded with tones of orange  */
 
 :root{
     --co01: rgb(255, 153, 0);
@@ -18,7 +18,7 @@ I chose to use the colour orange as the main charicter in the reference comic "H
 }
 
 /* Appling styling to the whole page (body)
-I decided to create a gradiant backgound to mimic the style from the reference "Heard". The gradiant firstly creates movement from the top of 
+I decided to create a gradiant backgound to mimic the style from the reference "Hedra". The gradiant firstly creates movement from the top of 
 the page to the bottom to create a sense of movement downwards, mimicing a pit getting deeper.  I decided to do this as the comic follows an 
 explorer running deeper into a cave*/
 
