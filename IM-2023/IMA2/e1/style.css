@@ -1,8 +1,165 @@
-.column1 {
-    float: left; 
-    width: 50%;
+*{
+    box-sizing: border-box;
+    margin: 0%;
 }
-.column2 {
-    float: left; 
-    width: 50%;
+
+/* Creating colour palatte to refer to for the grid background colours and boarders
+I chose to use the colour orange as the main charicter in the reference comic "Heard" was shaded with tones of orange  */
+
+:root{
+    --co01: rgb(255, 153, 0);
+    --co02: rgb(255, 180, 67);
+    --co03: rgb(255, 196, 107);
+    --co04: rgb(255, 128, 0);
+    --co05: rgb(255, 144, 40);
+    --co06: rgb(255, 208, 88);
+
+    --coB: rgb(235, 135, 4);
 }
+
+/* Appling styling to the whole page (body)
+I decided to create a gradiant backgound to mimic the style from the reference "Heard". The gradiant firstly creates movement from the top of 
+the page to the bottom to create a sense of movement downwards, mimicing a pit getting deeper.  I decided to do this as the comic follows an 
+explorer running deeper into a cave*/
+
+body{
+    margin-top: 3%;
+    background: linear-gradient(0deg, rgba(255, 145, 0, 0.925) 0%, rgba(231, 179, 90, 0.911) 100%);
+}
+
+/* Determinating the grid structure of 5 columns and 7 rows */
+
+.grid-container {
+    display: grid;
+    height: 160vh;
+    width: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px; 
+  }
+
+/* All of the bellow item are grouped div's within the grid with added styling
+I chose to randomly assign diffreant orange tones to diffrent boxes in order to create a sense of movement simiilar to the movment of the 
+character through the cave.
+  */
+
+.grid-item {
+    background-color: orange;
+}
+
+.grid-item-1 {
+    background-color: var(--co01);
+    border-top-right-radius: 60px;
+    border-top: 4px;
+    border-right: 4px;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-color:  var(--coB);
+    border-style: solid;
+}
+
+.grid-item-2 {
+    background-color: var(--co04);
+    border-bottom-left-radius: 60px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 4px;
+    border-bottom: 4px;
+    border-color: var(--coB);
+    border-style: solid;
+}
+
+.grid-item-3 {
+    background-color: var(--co02);
+    border-bottom-right-radius: 60px;
+    border-top: 0px;
+    border-right: 4px;
+    border-left: 0px;
+    border-bottom: 4px;
+    border-color: var(--coB);
+    border-style: solid;
+}
+
+.grid-item-4 {
+    background-color: var(--co06);
+    border-top-left-radius: 60px;  
+    border-top: 4px;
+    border-right: 0px;
+    border-left: 4px;
+    border-bottom: 0px;
+    border-color: var(--coB);
+    border-style: solid; 
+}
+
+.grid-item-5{
+    background-color: var(--co05);  
+    border-top: 4px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 4px;
+    border-color: var(--coB);
+    border-style: solid;
+}
+
+.grid-item-6 {
+    background-color: var(--co02);  
+    border-top: 0px;
+    border-right: 4px;
+    border-left: 4px;
+    border-bottom: 0px;
+    border-color: var(--coB);
+    border-style: solid;
+}
+
+.grid-item-7 {
+    background-color: var(--co06);  
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 4px;
+    border-color: var(--coB);
+    border-style: solid;
+}
+
+.grid-item-8 {
+    background-color: var(--co05);  
+    border-top: 0px;
+    border-right: 4px;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-color: var(--coB);
+    border-style: solid;
+}
+
+.grid-item-9 {
+    background-color: var(--co05);  
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 4px;
+    border-bottom: 0px;
+    border-color: var(--coB);
+    border-style: solid;
+}
+
+.grid-item-10 {
+    background-color: var(--co04);  
+    border-top: 4px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-color: var(--coB);
+    border-style: solid;
+}
+
+.grid-item-11 {
+    background-color: var(--co02);  
+    border-top: 4px;
+    border-right: 0px;
+    border-left: 4px;
+    border-bottom: 0px;
+    border-color: var(--coB);
+    border-style: solid;
+}
+
+
