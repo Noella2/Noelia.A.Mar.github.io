@@ -1,8 +1,99 @@
-.column1 {
-    float: left; 
-    width: 50%;
+/* z-index order */
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
 }
-.column2 {
-    float: left; 
-    width: 50%;
+
+/* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
+/* https://lospec.com/palette-list/1bit-monitor-glow */
+/* you're welcome to change the colours if you want or any of the other general page style */
+:root{
+  --col-01:#222323;
+  --col-02:#f0f6f0;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  --border: 1px solid var(--col-02);
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--col-01);
+  color: var(--col-02);
+  padding: 2vw;
+  font-size: 21px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+.title{
+  font-size: 45px;
+}
+
+/*
+  I've set up a basic flexbox for each recipe container - you might want to change some of the 
+  flex properties here on the container or on the individual flex items depending on how you want to style them
+*/
+.RecipeBox{
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+}
+
+.FilterSection{
+  padding: 5px;
+}
+
+/* Arranged the top menu in a row rather then column to save space when not in use. This is how menuse appear on most webites*/
+.FilterBox {
+  position: row;
+  display: inline-flex;
+}
+
+/* Applied styling to the button so when clicked it turns blue, allowing users to now which filter they are on */
+.FilterButton:active{
+  color: var(--col-03);
+}
+.SelectedFilter{
+  color: var(--col-03); 
+}
+
+/* Made the font larger to darw attention*/
+.RecipeName{
+font-size: 38px;
+text-decoration-line:underline;
+padding: 2%;
+}
+
+/* Adding padding to make text easily readable */
+p{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-right: 0.5%;
+  padding-left: 0.5%;
+  font-size: 20px;
+}
+
+.Author{
+padding: 0.5%;
+}
+
+.Attribution{
+  font-size: 14px;
+  padding: 0.5%;
+
+}
+
+/*For the link on the page I moved it a layer up using z-index and increased the sizing of the hit box via padding and margins to make
+ the area of each recipe clickable to the link, rather then only including a URL link */
+
+.RecipeLink{
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 24em;
+  margin-bottom: -24em;
+  padding-top: 4em;
+  margin-top: -4em;
 }
