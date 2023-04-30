@@ -38,6 +38,7 @@ body{
 /*Added in transition for the top buttons so the text faded in and out of black and white, in union with the other text on the page*/
  a{
   transition: 0.75s;
+  color: rgb(120, 20, 220)
 }
 
 
