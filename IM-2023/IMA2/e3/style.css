@@ -1,8 +1,308 @@
-.column1 {
-    float: left; 
-    width: 50%;
+
+
+
+ /* Throughout the webpage, I decided to keep the styling and colours basic. I decided to use tones of purple for the buttons and other elements 
+ as it complemented the blue and purple URLs thought the page as well as going well with both the dark and light modes of the page. Additionally,
+  I went for a soft appearance to the webpage adding circular components to the buttons and throbber which fit well with the soft purple tones.
+   Additionally, to further amplify the sense of smoothness and softness in the users’ interactions, I increase the transition of both buttons 
+   and transitions. */
+
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
 }
-.column2 {
-    float: left; 
-    width: 50%;
+
+:root{
+  --col-01:#171219;
+  --col-02:#f2fbeb;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+
+/* I added a cubi_bezier to have more control over the fade in and out of the light and dark modes. I increased the speed of the transition but
+ to make it still feel smooth like the rest of the page, I added a slower fade-in at the beginning which speeds up and ends with a faster
+  fade-out. */ 
+
+body{
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+  transition: all 0.5s cubic-bezier(0.65, 0.15, 0.91, 1);
+}
+
+/*Added in transition for the top buttons so the text faded in and out of black and white, in union with the other text on the page*/
+ a{
+  transition: 0.75s;
+}
+
+
+
+nav {
+  margin-top: 1rem;
+}
+
+nav li{
+  font-size: 1rem;
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+/* To add feedback to the top navigation bar, I included both a hover and active styling to allow users to scroll through their options and 
+receive confirmation when they select their button. */
+
+li :hover{
+  color:rgb(45, 9, 80) ;
+  background: rgba(207, 179, 250, 0.299);
+  border-radius: 20px;
+  padding: 0.3%;
+  padding-right:0.7% ;
+  padding-left:0.7% ;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+li :active{
+  background: rgba(184, 169, 207, 0.685);
+  border-radius: 20px;
+  padding: 0.3%;
+  padding-right:0.7% ;
+  padding-left:0.7% ;
+}
+
+p a:hover{
+  background: rgba(207, 179, 250, 0.299);
+  color:rgb(45, 9, 80) ; ;
+  border-radius: 20px;
+  padding: 0.155%;
+  font-size: 23.1px;
+}
+
+
+/*
+I added the same styling as the above buttons to the clickable link thought to create unity through the page’s features.
+*/
+
+p a:active{
+  background: rgba(221, 202, 249, 0.475);
+  color:rgb(45, 9, 80) ; 
+  border-radius: 20px;
+  padding: 0.155%;
+  font-size: 23.1px;
+}
+
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+
+/* For the dark/light mode button, I created a pulsating animation over the button to symbolise the idea that the button is controlling the
+ lighting. Additionally, the slow soft pulsating of the button draws the users’ eyes to the top right where there is an absence of content 
+ and interest and is likely to be overlooked. */
+ 
+  #mode-button{
+    float: right;
+    position: sticky;
+    top: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    animation: darkMode 3.5s infinite reverse ease-in-out;
+  } 
+  
+
+
+  /* I added the same styling to this button. in order for this to work with the repeating animation i had to tell the animation to stop (none)
+  in order for the animatio to stop reviling the solid static button*/
+
+
+  #mode-button:hover{
+    float: right;
+    position: sticky;
+    top: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    animation: none;
+    background: rgb(207, 179, 250);
+  color:rgb(14, 0, 28) ; ;
+  border-radius: 20px;
+  }
+
+  #mode-button:active{
+    float: right;
+    position: sticky;
+    top: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    animation: none;
+    background: rgba(161, 110, 237, 0.865);
+  color:rgb(36, 6, 67) ; 
+  border-radius: 20px;
+  }
+  @keyframes darkMode {
+    0% {
+      background-color: rgba(29, 9, 37, 0.607);
+    }
+    50% {
+      background-color: rgb(226, 171, 255);
+      
+    }
+    100% {
+    background-color: rgba(29, 9, 37, 0.6);
+    }
+  }
+
+
+
+
+
+/* code for loading page */
+#load-body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/*
+Added same styling from the navigation buttons above to create unity.
+*/
+#load-link{
+  line-height: 1rem;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+#load-link:hover{
+  color:rgb(120, 20, 220) ;
+  background: rgba(47, 42, 134, 0.299);
+  border-radius: 20px;
+}
+
+#load-link:active{
+  color:rgb(120, 20, 220) ;
+  background: rgba(19, 1, 56, 0.511);
+  border-radius: 20px;
+}
+
+
+
+/* For the loading throbber, I used the same styling as the buttons to create unity. I animated it to spin in a continuous circular pattern as 
+the user would expect a loading bar to either function in this manner or in a linear manner. Additionally, I animated the colour to alternate
+ to further emphasise that the page was loading. */ 
+
+#load-throbber{
+  width: 3%;
+  height: 0.7%;
+  margin: 0.55%;
+  border-radius: 20px;
+  background-color: var(--col-03);
+  display: none;
+  animation: LoadingBar 2s infinite reverse; 
+}
+@keyframes LoadingBar {
+  0% {
+    background-color: rgb(120, 20, 220);
+  }
+  50% {
+    background-color: rgb(124, 118, 230);
+    transform: rotate(90deg);
+  }
+  100% {
+  background-color: rgb(120, 20, 220);
+  transform: rotate(180deg);
+  }
+}
+
+
+
+
+/* Media Queries */
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+
+}
+
+@media (prefers-reduced-motion) {
+  :root{
+    scroll-behavior: auto;
+  }
 }
