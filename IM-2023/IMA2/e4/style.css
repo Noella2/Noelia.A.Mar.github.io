@@ -1,8 +1,161 @@
-.column1 {
-    float: left; 
-    width: 50%;
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+  border-radius: 20px;
 }
-.column2 {
-    float: left; 
-    width: 50%;
+body{
+  padding-top:  9%; ;
+  background-color: #111111;
 }
+:root{
+  --col-01:#222323;
+  --col-02:#f0f6f0;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  --col-05:#bcbdbc;
+  --col-06:#6f6f6f;
+  --border: 1px solid var(--col-02);
+}
+
+.video-player-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* becuase I want to overlay the play icon on the video they need to be in their own wrapper */
+.video-element-wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+#videoElement{
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+#videoPlayOverlay{
+  width: 8rem;
+  height: 8rem;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: center;
+  opacity: 0.6;
+  display: none;
+}
+
+/*overal styleing for all buttons exept icon*/
+.video-controls-wrapper{
+  display: flex;
+  justify-content: center;
+  padding: 0.5%;
+}
+#controlsWrapper{
+  display: none;
+}
+
+.video-control-button{
+  width: 2rem;
+  height: 2rem;
+  padding: .1rem;
+  border: none;
+  cursor: pointer;
+}
+.video-control-button:hover{
+  background-color: plum;
+}
+.video-control-button:active{
+  background-color: rgb(91, 0, 91);
+}
+
+
+
+.button-icon{
+  pointer-events: none;
+
+}
+
+
+
+
+ /* Applies styling to all buttons. I decided to go with purple tones in the overall styling to match the video playing. Additionally, I rounded
+  the edges of all elements to match the swirling pattern in the video. I also made sure the background image of the buttons worked with the
+   border radius by scaling them down so they didn’t touch the border and stick out.*/
+button{
+  background: rgba(126, 2, 126, 0.644) ;
+  border-radius: 15px;
+  background-size: 26.5px;
+  background-position: center;
+  margin: 0.2%;
+  margin-top: 0.9%; 
+}
+
+/*Added basic feedback to buttons. I made the hover button become a darker purple to indicate you are hovering over it and then a much lighter
+ shade of purple to indicate it had been clicked. I used a natural tone of purple to indicate its neutral state between hover and active function.
+  */
+button:active{
+  background-color: rgb(65, 0, 65);
+}
+button:hover{
+  background-color: rgb(220, 6, 220);
+}
+#playButton{
+  background-image: url('./icons/play.svg');
+}
+
+
+/*added styling for added buttons with corrosponding icons*/
+#muteButton{
+  background-image: url('./icons/mute.svg');
+}
+
+#fullscreenButton{
+  background-image: url('./icons/fullScreen.svg');
+}
+
+.video-progress-bar{
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  height: 1rem;
+  flex-grow: 1;
+  cursor: pointer;
+  background-color: rgb(147, 75, 147);
+  box-shadow: 0 1px 2px var(--col-02) inset;
+  margin: 1%;
+  margin-top: 2%;
+}
+
+
+
+::-webkit-progress-bar {
+  background-color: plum;
+  box-shadow: 0 1px 2px rgb(59, 0, 51) inset;
+  border-radius: 20px;
+}
+::-webkit-progress-value {
+  background-color: purple;
+  border-radius: 20px;
+}
+
+.timeline-loading{
+  background-image: -moz-repeating-linear-gradient(45deg, rgb(80, 42, 80)) 0% 2%, transparent 2% 4%, red 30%;
+  animation: loadingAnimation 4s linear infinite;
+}
+
+@keyframes loadingAnimation {
+  50%{
+    background-position: blue 50% 0%;
+  }
+  100%{
+    background-color: purple;
+  }
+}
+

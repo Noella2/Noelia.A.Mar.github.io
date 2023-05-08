@@ -1,23 +1,57 @@
 <!DOCTYPE html>
 
-<html>
-    
-    <head lang="en">
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Player Experiment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="playerControls.js" defer></script>
+
+  </head>
+
+  <body>
+
+    <!-- this element holds all of the media player -->
+    <div class="video-player-wrapper">
+      <!-- this element holds the video element and the overlay -->
+      <div class="video-element-wrapper">
+
+        <video id="videoElement" controls>
+          <source src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4">
+        </video>
+
+        <img id="videoPlayOverlay" src="./icons/play.svg">
+
+      </div>
+      <!-- this element holds all of the custom controls -->
 
 
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+ <!-- I arranged the elements in order from play, mute, video timeline and fullscreen. The beginning features buttons which are most likely to 
+  be used most, thus on the left where the viewer’s eyes scan to first. I also placed the fullscreen button on the other end as this is a
+   less-used function. Additionally, this is how most streaming platforms such as YouTube and Vimeo lay these elements out, thus fitting into
+    users’ experiences as to where things will be.-->
 
+      <div class="video-controls-wrapper" id="controlsWrapper">
 
-    </head>
+        <button class="video-control-button" id="playButton"></button>
 
-    <body>
+        <button class="video-control-button" id="muteButton"></button>
 
- <h1>
-    week 2
- </h1>
-    </body>
+        <progress class="video-progress-bar" id="progressBar" value="0"></progress>
+
+       <!-- I decided to include full screen as my additional feature to the video player. I felt this would give the most value to users as it
+         allows them to control how they view it and being a video, the quality and size one views it is of much importance. Additionally,
+          unlike platforms such as YouTube, this website has no other videos elements so a backward or skip button makes no sense as there 
+          are no other videos to skip to. -->
+
+        <button class="video-control-button" id="fullscreenButton"></button>
+
+      </div>
+
+    </div>
+
+  </body>
 
 </html>
