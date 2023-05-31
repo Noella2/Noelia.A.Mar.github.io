@@ -1,8 +1,87 @@
-.column1 {
-    float: left; 
-    width: 50%;
+
+/* unifying the box sizing ans removing default button styling  */
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    border: none;
 }
-.column2 {
-    float: left; 
-    width: 50%;
+ 
+
+
+/* basic styling for the webpage to be orange/yellow and purple tones as complementary colors to create unity. Additionally used border radios to 
+create a soft unified aesthetic throughout the page. I also removed the ability to use the scroll on the main page to hide the empty space caused by 
+the grid styling below*/
+body {
+    margin-top: 1.5%;
+    background: rgb(193, 134, 220);
+    overflow: hidden;
+}
+button {
+    background: orange;
+    cursor: pointer;
+    border-radius: 9px;
+    border-color: rgb(211, 211, 211);
+    font-size: 15px;
+    padding: 5px 15px;
+}
+
+
+
+/* Determining the grid structure into 5 by 5, whiles also making the buttons square in shape*/
+.grid-container {
+    display: grid;
+    height: 145vh;
+    width: 85vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+
+/* I had to make the hover and active feedback limited to the boarder and a box shadow as the color changes in the button where linked to the 
+javascript and would override the colour styling in the css */
+button:hover {
+    background: rgba(255, 216, 144, 0.826);
+    border-radius: 7px;
+    border-color: rgb(255, 255, 255);
+    box-shadow: rgba(255, 255, 255, 0.779) 0px 0px 0px 2.15px, rgba(253, 253, 253, 0.927) 0px 4px 6px -1px, rgba(255, 255, 255, 0.84) 0px 1px 0px inset;
+}
+button:active {
+    background: rgba(255, 136, 0, 0.829);
+    border-color: rgb(0, 0, 0);
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+
+
+/* styling the modal to fit into the webpage aesthetic, centering the content and also making the text readable via color and line spacing. */
+#modalDialog::backdrop {
+    background-color: rgba(126, 67, 129, 0.662);
+}
+#modalDialog {
+    background-color: rgba(87, 21, 87, 0.922);
+    position: absolute;
+    left: 7.5%;
+    top: 12%;
+    width: 85%;
+    height: 25;
+    border-color: rgba(252, 216, 246, 0.906);
+    border-radius: 10px;
+}
+p {
+    color: white;
+    font-size: 20px;
+    padding-bottom: 2.5%;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.3;
+}
+#showModal {
+    margin-bottom: 1%;
+}
+h1 {
+    color: white;
+    padding-bottom: .7%;
 }

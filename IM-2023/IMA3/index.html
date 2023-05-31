@@ -1,23 +1,108 @@
 <!DOCTYPE html>
 
 <html>
-    
-    <head lang="en">
+
+<head lang="en">
 
 
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assesemnt 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <center>
+        <!-- Including a modal to hide my 500 words to not interfere with the interaction design  -->
+
+        <button id="showModal">500 Words</button>
 
 
-    </head>
+        <dialog id="modalDialog">
 
-    <body>
+            <h1>500 Words</h1>
 
- <h1>
-    week 2
- </h1>
-    </body>
+            <p>
+                For my website, I chose the prompts of interwoven and feedback to guide my interaction design. My
+                interpretation of interwoven was in how one thing affects another, and how these connections impact the
+                final result of an interaction. I also wanted to incorporate feedback as a visualiser of these
+                connections between interactions, whilst also creating a visual end goal. With this in mind, I designed
+                a grid of buttons in which when one button is clicked, the other buttons change to a different colour to
+                visualise how the buttons are interwoven and affect each other. Additionally, because the buttons
+                alternate between two values, by the end, a pattern will be seen through the button which was achieved
+                by clicking the buttons in a certain order. This visually represents how each interaction has led to the
+                final pattern. I styled the website using orange, yellow and purple complementary colours, alongside a
+                soft border and animation. I decided to use this styling as through my previous assessments, I used a
+                similar colour palette and wanted to unify and replicate this in my final interaction.
+
+            </p>
+            <p>
+
+                Challenges I encountered whilst making the page was getting the colour change and animation to apply to
+                all buttons except the one which is clicked. At first, I thought of using a filter to search for clicked
+                and unclicked buttons, however, this proved difficult and I ended up creating this using a toggle. The
+                toggle worked by taking the value of the button clicked as “e” and stating that the function be applied
+                to everything within the button array that did not equal to “e”, the button clicked. Then I used a basic
+                if-else statement for the alternating colours. Additionally, I had to change my hover and active
+                feedback for the button from background colour to border and shadow box styling as the background colour
+                styling on hover and active was overridden by the background colour alternating in javascript.
+            </p>
+            <p>
+                Ultimately, I think I created an interaction which successfully demonstrates the ideas of interwoven and
+                feedback, and how they can work together. I really like how as the buttons are clicked a pattern reveals
+                how all the buttons are interconnected, which as a result creates a pattern which visualises this and
+                can be unique depending on the order in which the user clicks the buttons. Additionally, I feel the
+                animation of a flip helps visualise this further. However, I feel that having all the buttons flip
+                together makes the page feel cluttered and confusing. Perhaps a more subtle animation could be used to
+                declutter the page whilst still giving enough feedback to users. I had also planned to include more than
+                two colours for the buttons to switch to but ultimately feel that two colours are better. This is
+                because it was more simple. clearer and more colours would have been confusing with a flip animation
+                which suggests two sides to a button thus two colours.
+            </p>
+
+
+            <button id="closeModal">Close</button>
+
+        </dialog>
+
+        <!--
+        Creating the individual buttons to arrange along the grid styling in a 5 by 5 ratio. I chose to go 5 by 5 as it was enough squares to get
+        my point of buttons interactivity across, but not too many that the experience was confusing and difficult to undertake. I set the style 
+        to orange so my javascript function was able to read the colour variable and toggle the right if else statement
+      -->
+
+        <div class="grid-container">
+
+            <button class="card" id="1" style="background-color: orange;"></button>
+            <button class="card" id="2" style="background-color: orange;"></button>
+            <button class="card" id="3" style="background-color: orange;"></button>
+            <button class="card" id="5" style="background-color: orange;"></button>
+            <button class="card" id="6" style="background-color: orange;"></button>
+            <button class="card" id="7" style="background-color: orange;"></button>
+            <button class="card" id="8" style="background-color: orange;"></button>
+            <button class="card" id="9" style="background-color: orange;"></button>
+            <button class="card" id="10" style="background-color: orange;"></button>
+            <button class="card" id="11" style="background-color: orange;"></button>
+            <button class="card" id="12" style="background-color: orange;"></button>
+            <button class="card" id="13" style="background-color: orange;"></button>
+            <button class="card" id="14" style="background-color: orange;"></button>
+            <button class="card" id="15" style="background-color: orange;"></button>
+            <button class="card" id="16" style="background-color: orange;"></button>
+            <button class="card" id="17" style="background-color: orange;"></button>
+            <button class="card" id="18" style="background-color: orange;"></button>
+            <button class="card" id="19" style="background-color: orange;"></button>
+            <button class="card" id="20" style="background-color: orange;"></button>
+            <button class="card" id="21" style="background-color: orange;"></button>
+            <button class="card" id="22" style="background-color: orange;"></button>
+            <button class="card" id="23" style="background-color: orange;"></button>
+            <button class="card" id="24" style="background-color: orange;"></button>
+            <button class="card" id="25" style="background-color: orange;"></button>
+            <button class="card" id="26" style="background-color: orange;"></button>
+
+        </div>
+
+    </center>
+
+</body>
 
 </html>
